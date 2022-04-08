@@ -1,5 +1,5 @@
 
-headers = {
+HeadersMain = {
     'Accept':'application/json, text/plain, */*',
     'Accept-Encoding':'gzip, deflate, br',
     'Accept-Language':'en-US,en;q=0.5',
@@ -18,4 +18,4 @@ headers = {
 }
 
 
-url = "https://api1.weightwatchers.com/signup/v4/check/login?market=en-US"
+MainUrl = "https://api1.weightwatchers.com/signup/v4/check/login?market=en-US"

@@ -1,14 +1,14 @@
 import string
 import random
 
-def Format_Payload_Dict(email,password,authURL,payload_dict):
+def FormatPayload(email,password,authURL,payload_dict):
     payload_object = payload_dict
     payload_object["userLoginId"] = email
     payload_object["password"] = password
     payload_object["authURL"] = authURL
     return payload_object
 
-def generate_pass():
+def PassGenerator():
     lower = string.ascii_lowercase
     upper = string.ascii_uppercase
     num = string.digits
@@ -18,14 +18,14 @@ def generate_pass():
         passw += random.choice(all)
     return passw
 
-headers_default = {
+HeadersMain = {
     "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
     "Accept-Encoding":"gzip, deflate, br",
     "Accept-Language":"en-US,en;q=0.5",
     "Host":"www.netflix.com",
     "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0"}
 
-headers_post = {
+HeadersPost = {
     "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
     "Accept-Encoding":"gzip, deflate, br",
     "Accept-Language":"en-US,en;q=0.5",
@@ -36,9 +36,9 @@ headers_post = {
     "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0"
 }
 
-first_url = "https://www.netflix.com/Login"
+MainUrl = "https://www.netflix.com/Login"
 
-payload_dict = {
+Payload = {
     "userLoginId":"",
     "password":"",
     "rememberMe":"true",
