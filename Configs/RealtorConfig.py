@@ -76,25 +76,3 @@ FirstUrl = "https://www.realtor.com/"
 AccessControlUrl = "https://sdk.iad-01.braze.com/api/v3/content_cards/sync"
 
 MainUrl = "https://myaccount.realtor.com/find_user_by_email/"
-
-
-
-
-
-#Note 
-#Main request:
-#Options request first: as previous one - just copy and remove part of the headers with "what to ask" stuff
-#Post request(201 code,https://sdk.iad-01.braze.com/api/v3/content_cards/sync): 
-#Options request last: no changes
-#Last requests: no changes
-
-
-#For Post request:
-#Need api_key - (static: 7cc9d032-9d6d-44cf-a8f5-d276489af322) in response(inside of JS, but not generated) - 	https://www.realtor.com/assets/rdc-home/prod/545cce7/_next/static/chunks/pages/_app-588497237066f234.js
-#(number from the end of the link are inside of first request's response)
-#Need device_id - JS generated(a lot of JS, can get it here "https://assets.adobedtm.com/6809d1ba6f0c/c4bef609fe0d/launch-b1aeef4798eb.min.js", number for the end is in response from another js above(one for api_key))
-#Need user_id - it's a cookie from first requeqst, need to only edit it(change first symbols)
-
-
-
-#Possible solution for 10 digits time stamp
